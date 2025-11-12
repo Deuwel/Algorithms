@@ -30,7 +30,7 @@ def topological_sort(graph,res):
     while zero_list:
         poped = zero_list.pop(0)
         res.append(poped)
-        for i in testGraph[poped]:
+        for i in graph[poped]:
             in_degree[i] -= 1
             if in_degree[i] == 0:
                 zero_list.insert(0,i)
